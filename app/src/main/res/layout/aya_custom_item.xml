@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_margin="20dp"
+
+
+    >
+
+        />
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_baseline_circle_24"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:layout_margin="5dp">
+
+        <!--                android:text="1"-->
+        <TextView
+            android:id="@+id/aya_number"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+    <!--                android:text="الحمد لله رب العالمين "-->
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/aya_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+
+
+            </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_play"
+        android:layout_width="0dp"
+        android:layout_weight=".2"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:textColor="@android:color/background_dark"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/ic_baseline_play_circle_filled_24"
+
+        />
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
+
+
+

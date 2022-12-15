@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Quran App</string>
+    <string name="btn_text">Show Employees</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="ok_text">Ok</string>
+    <string name="illegalChar">\\</string>
+</resources>

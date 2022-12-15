@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_margin="20dp"
+
+   >
+    <RelativeLayout
+
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_baseline_suranum_24"
+        >
+
+        <!--        android:text="1"-->
+        <TextView
+            android:id="@+id/surah_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="right"
+
+        >
+
+
+<!--        android:text="الفاتحه"-->
+        <TextView
+            android:id="@+id/SuraName"
+            style="@style/customStyle"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            >
+<!--            android:text="مكيه"-->
+            <TextView
+                android:id="@+id/suratype"
+                style="@style/customStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+
+                />
+
+            <TextView
+
+            style="@style/customStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ايات"
+
+
+           />
+<!--            android:text="7 "-->
+            <TextView
+                android:id="@+id/VersesNumder"
+                style="@style/customStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                />
+    </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
