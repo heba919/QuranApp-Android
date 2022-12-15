@@ -1,6 +1,8 @@
 package com.example.ahmedtawfik.lab05android;
 
 import android.content.Intent;
+import android.os.Handler;
+import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.LoaderManager;
@@ -28,6 +30,10 @@ public class SuraActivity extends AppCompatActivity implements LoaderManager.Loa
     SuraAdapter suraAdapter ;
 
     ProgressBar progressBar;
+     int mProgressStatus = 0;
+
+    private Handler mHandler = new Handler();
+
 
     private static String SURA_URL = "http://api.alquran.cloud/v1/surah";
 
@@ -37,15 +43,23 @@ public class SuraActivity extends AppCompatActivity implements LoaderManager.Loa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sura);
 
-        lv_showEmployees = findViewById(R.id.lv_showEmployees);
+        if (android.os.Build.VERSION.SDK_INT > 9)
+        {
+            StrictMode.ThreadPolicy policy = new
+            StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
 
+
+        lv_showEmployees = findViewById(R.id.lv_showEmployees);
         progressBar = findViewById(R.id.pb_progress);
+
+
+
+
 
         LoaderManager loaderManager = getSupportLoaderManager();
         loaderManager.initLoader(0, null, SuraActivity.this).forceLoad();
-
-
-
 
 
         lv_showEmployees.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -60,7 +74,11 @@ public class SuraActivity extends AppCompatActivity implements LoaderManager.Loa
             }
         });
 
-         }
+
+
+
+
+    }
 
 
 
@@ -68,6 +86,7 @@ public class SuraActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public Loader<ArrayList<SuraInfo>> onCreateLoader(int i, @Nullable Bundle bundle) {
+        android.os.SystemClock.sleep(50);
         progressBar.setVisibility(View.VISIBLE);
         return new GetSuraDetails(this, SURA_URL);
     }

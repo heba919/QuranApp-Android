@@ -41,8 +41,8 @@ public class GetSuraDetails extends AsyncTaskLoader<ArrayList<SuraInfo>> {
         try {
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
-            urlConnection.setReadTimeout(10000);
-            urlConnection.setConnectTimeout(20000);
+            urlConnection.setReadTimeout(100000);
+            urlConnection.setConnectTimeout(20000000);
             urlConnection.connect();
             inputStream = urlConnection.getInputStream();
             jsonResponse = readFromStream(inputStream);
