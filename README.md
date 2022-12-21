@@ -1,2 +1,2 @@
 # QuranApp-Android
-[Contribution guidelines for this project](Quran AppDocumentation.pdf)
+[a relative link](Quran AppDocumentation.pdf)
